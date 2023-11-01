@@ -21,10 +21,30 @@ pip install .
 
 ### Use cloudDSWE
 The code is designed to work on image collections with the 
-.map() function in gee. Thus, first you will have to 
+.map() function in gee. Thus, first you will have to
 
 ```python
-ls8=ee.imageCollection()
+# Import packages
+import ee
+import cloudDSWE
+
+# Initialize GEE
+ee.Authenticate()
+ee.Initialize()
+
+#Set the parameters for filtering the imageCollection
+aoi=ee.geometry.Polygon[[67.188739, 43.702766],[67.378979, 43.702766],[67.378979, 43.836892],[67.188739, 43.836892],[67.188739, 43.702766]]
+start_date=ee.Date("2019-01-01")
+end_date=ee.Date("2019-12-31")
+
+# Load image collection, Landsat 8 in this case 
+ls8 = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2").filterDate(start_date,end_date).filterBounds(aoi)
+
+# Make preprocessing and compute indices
+indices=ls8.map(preprocess).map(compute_indices)
+
+#Compute the DSWE itself
+ls_dswe=indices.map(dswe)
 ```
 ### Detailed algorithm description by USGS
 

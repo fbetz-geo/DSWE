@@ -19,7 +19,6 @@ def dswe(image,wigt=0.124,awgt=0,pswt_1_mndwi=-0.44,pswt1_1_swir1=0.09,pswt_1_ni
     hillshade_mask = hillshade.gt(thrs_hillshade)
 
     # Individual tests
-
     # Test 1
     test1 = image.select("MNDWI").gt(wigt)
 
