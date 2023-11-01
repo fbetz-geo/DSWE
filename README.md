@@ -15,7 +15,7 @@ the python package from github:
 
 ```bash
 git clone https://github.com/fbetz-geo/DSWE
-cd cloudDSWE
+cd DSWE
 pip install .
 ```
 
