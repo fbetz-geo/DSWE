@@ -14,7 +14,7 @@ to get started. Once you have a working earth engine account, you can install
 the python package from github:
 
 ```bash
-git clone https://github.com/fbetz-geo/cloudDSWE
+git clone https://github.com/fbetz-geo/DSWE
 cd cloudDSWE
 pip install .
 ```
