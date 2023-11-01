@@ -7,11 +7,11 @@ ee.Initialize()
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-exec(read('cloudDSWE/__version__.py'))
+exec(read('cloudDSWE/_version_.py'))
 
 setup(
     name = 'cloudDSWE',
-    version = __version__,
+    version = _version_,
     packages = ['cloudDSWE',],
     license = 'MIT',
     long_description = read('README.md'),
