@@ -1,4 +1,4 @@
-rom setuptools import setup
+from setuptools import setup
 import os
 import ee
 
