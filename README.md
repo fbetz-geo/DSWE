@@ -41,7 +41,7 @@ end_date=ee.Date("2019-12-31")
 ls8 = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2").filterDate(start_date,end_date).filterBounds(aoi)
 
 # Make preprocessing and compute indices
-indices=ls8.map(preprocess).map(compute_indices)
+indices=ls8.map(preprocess_landsat).map(compute_indices_ls89)
 
 #Compute the DSWE itself
 ls_dswe=indices.map(dswe)
