@@ -1,9 +1,11 @@
 ## Getting Dynamic Surface Water Extent for Landsat Collection 2 in Google Earth Engine
 This is an implementation of the dynamic surface water extraction algorithm for Landsat
-collection 2 basing upon the algorithm of Jones (2019). An original version of an earth-engine
-enabled DSWE algorithm available from [Ben DeVries](https://github.com/bendv/eedswe/).
-However, the original code is not updated for Landsat collection 2 and for the
-updated version of the USGS DSWE algorithm. 
+collection 2 basing upon the algorithm of Jones (2019). This work is inspired by 
+by [Ben DeVries](https://github.com/bendv/eedswe/) who presented GEE code for 
+the early version of DSWE and Landsat collection 1. The python code here is a new
+implementation of the updated USGS DSWE algorithm and Landsat collection 2 
+surface reflection.
+
 
 ### Use the python code
 You will need an account and authentication for Google Earth Engine 
@@ -11,7 +13,7 @@ to get started. Once you have a working earth engine account, you can install
 the python package from github:
 
 ```bash
-git clone https://github.com/fbetz-geo/
+git clone https://github.com/fbetz-geo/cloudDSWE
 cd cloudDSWE
 pip install .
 ```
