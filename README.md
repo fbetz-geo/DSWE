@@ -1,7 +1,7 @@
 ## Getting Dynamic Surface Water Extent for Landsat Collection 2 in Google Earth Engine
 This is an implementation of the dynamic surface water extraction algorithm for Landsat
 collection 2 basing upon the algorithm of Jones (2019). This work is inspired by 
-by [Ben DeVries](https://github.com/bendv/eedswe/) who presented GEE code for 
+the code [Ben DeVries](https://github.com/bendv/eedswe/) who presented GEE code for 
 the early version of DSWE and Landsat collection 1. The python code here is a new
 implementation of the updated USGS DSWE algorithm and Landsat collection 2 
 surface reflection. Currently only Landsat 8 and 9 are supported 
@@ -21,8 +21,11 @@ pip install .
 
 ### Use cloudDSWE
 The code is designed to work on image collections with the 
-.map() function in gee
+.map() function in gee. Thus, first you will have to 
 
+```python
+ls8=ee.imageCollection()
+```
 ### Detailed algorithm description by USGS
 
 [Landsat Collection 2 (C2) Level 3 (L3) Dynamic Surface Water Extent (DSWE) Algorithm Description Document (ADD) ](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-2084_LandsatC2_L3_DSWE_ADD-v1.pdf)
